@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Battleship Game</title>
+    <link rel="stylesheet" href="./style/index.css">
+</head>
+<body>
+    <div class="settings">
+        <h3>Choose your grid size:</h3>
+        <form id="settingsForm">
+            <input type="radio" name="gridSize" value="10" checked> 10 X 10<br>
+            <input type="radio" name="gridSize" value="11"> 11 X 11<br>
+            <input type="radio" name="gridSize" value="12"> 12 X 12<br>
+            <input type="radio" name="gridSize" value="13"> 13 X 13<br>
+            <input type="radio" name="gridSize" value="14"> 14 X 14<br>
+            <input type="radio" name="gridSize" value="15"> 15 X 15<br>
+
+            <h3>Please choose numbers of battleships:</h3>
+            battleship size 2: <input type="number" id="battleshipSize2" min="0" value="2"><br>
+            battleship size 3: <input type="number" id="battleshipSize3" min="0" value="2"><br>
+            battleship size 4: <input type="number" id="battleshipSize4" min="0" value="2"><br>
+            battleship size 5: <input type="number" id="battleshipSize5" min="0" value="2"><br>
+            <button type="button" id="startGameBtn">Start Game</button>
+        </form>
+    </div>
+    
+    <div class="game">
+        <div id="gameBoard" class="board"></div>
+        <div class="info">
+            <h3>Number of remaining battleships:</h3>
+            <table id="remainingShipsTable">
+                <tr><th>Sub type</th><th>Sub amount</th></tr>
+                <tr><td>Sub type 2</td><td id="remainingSize2">1</td></tr>
+                <tr><td>Sub type 3</td><td id="remainingSize3">1</td></tr>
+                <tr><td>Sub type 4</td><td id="remainingSize4">1</td></tr>
+                <tr><td>Sub type 5</td><td id="remainingSize5">1</td></tr>
+            </table>
+        </div>
+    </div>
+
+    <audio id="testAudio" src="./source/explosion-42132.mp3" preload="auto"></audio>
+    <button onclick="document.getElementById('testAudio').play()">Play Test Sound</button>
+    
+    <script type="module" src="./script/index.js"></script>
+</body>
+</html>
