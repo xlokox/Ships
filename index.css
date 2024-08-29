@@ -1,0 +1,41 @@
+body {
+   font-family: Arial, sans-serif;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 100vh;
+   margin: 0;
+   background-color: #f0f0f0;
+}
+
+.settings, .game {
+   margin: 20px;
+}
+
+#gameBoard {
+   display: grid;
+   grid-gap: 2px;
+}
+
+.cell {
+   width: 30px;
+   height: 30px;
+   background-color: #fff;
+   border: 1px solid #ccc;
+}
+
+.cell.ship {
+   background-color: #444;
+}
+
+.cell.hit {
+   background-color: red;
+}
+
+.cell.miss {
+   background-color: blue;
+}
+
+.cell.sunk {
+   background-color: darkred;
+}
